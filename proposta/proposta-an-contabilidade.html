@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Proposta Comercial – Site AN Contabilidade</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#030A2A;--navy-2:#0A1640;--navy-3:#13225A;--gold:#D9A441;--gold-2:#F0C46A;--ink:#0B1433;--muted:#5B6683;--line:#E3E7F0;--soft:#F4F6FB}
+@page{size:A4;margin:24mm 18mm 22mm 18mm;
+  @top-left{content:"AN Contabilidade · Proposta comercial";font:600 8pt "Plus Jakarta Sans",sans-serif;color:#5B6683}
+  @top-right{content:"15 de outubro de 2026";font:500 8pt "Plus Jakarta Sans",sans-serif;color:#5B6683}
+  @bottom-left{content:"Proposta válida por 15 dias";font:500 8pt "Plus Jakarta Sans",sans-serif;color:#5B6683}
+  @bottom-right{content:"Página " counter(page) " de " counter(pages);font:600 8pt "Plus Jakarta Sans",sans-serif;color:#030A2A}
+}
+@page:first{margin:0;@top-left{content:none}@top-right{content:none}@bottom-left{content:none}@bottom-right{content:none}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:var(--ink);font-size:10pt;line-height:1.55}
+b,strong{font-weight:700}
+
+/* Cover */
+.cover{height:297mm;width:210mm;position:relative;overflow:hidden;color:#fff;padding:22mm 20mm;display:flex;flex-direction:column;
+  background:radial-gradient(140mm 110mm at 85% 18%,#1B2C75 0%,transparent 70%),radial-gradient(120mm 90mm at 0% 100%,#0E1C55 0%,transparent 70%),var(--navy);break-after:page}
+.cover::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:12mm 12mm;pointer-events:none}
+.cover > *{position:relative;z-index:1}
+.brand{display:flex;align-items:center;gap:4mm}
+.brand img{height:13mm;width:auto;filter:brightness(0) invert(1)}
+.brand b{display:block;font-size:20pt;font-weight:800;letter-spacing:.02em;line-height:1}
+.brand small{display:block;font-size:7.5pt;letter-spacing:.3em;text-transform:uppercase;opacity:.75;margin-top:1.2mm}
+.cover .eyebrow{margin-top:auto;font-size:9pt;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2);display:flex;align-items:center;gap:3mm}
+.cover .eyebrow::before{content:"";width:2.5mm;height:2.5mm;border-radius:50%;background:var(--gold)}
+.cover h1{font-size:38pt;line-height:1.08;font-weight:800;letter-spacing:-.02em;margin:5mm 0 6mm}
+.cover h1 span{color:var(--gold-2)}
+.cover p.sub{font-size:12pt;color:rgba(255,255,255,.75);max-width:140mm}
+.cover-values{display:grid;grid-template-columns:1fr 1fr;gap:5mm;margin:14mm 0 16mm}
+.cv{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);border-radius:5mm;padding:6mm}
+.cv small{display:block;font-size:8.5pt;color:rgba(255,255,255,.6)}
+.cv strong{display:block;font-size:24pt;font-weight:800;line-height:1.2;margin:1mm 0}
+.cv.gold strong{color:var(--gold-2)}
+.cv em{font-style:normal;font-size:8.5pt;color:rgba(255,255,255,.7)}
+.cover-meta{display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.15);padding-top:6mm;font-size:9pt;color:rgba(255,255,255,.7)}
+.cover-meta b{display:block;color:#fff;font-size:10pt}
+.gold-bar{position:absolute;left:0;top:0;bottom:0;width:3mm;background:linear-gradient(var(--gold-2),var(--gold));z-index:2}
+
+/* Content */
+section{margin-bottom:7mm}
+h2{display:flex;align-items:center;gap:3mm;font-size:15pt;font-weight:800;color:var(--navy);letter-spacing:-.01em;margin-bottom:3.5mm;break-after:avoid}
+h2 .n{display:inline-grid;place-items:center;width:8mm;height:8mm;border-radius:2.2mm;background:var(--navy);color:var(--gold-2);font-size:9pt}
+p{margin-bottom:3mm}
+.lead{font-size:10.5pt}
+.muted{color:var(--muted)}
+table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:3mm;overflow:hidden;margin:2mm 0 3mm;font-size:8.8pt}
+th{background:var(--navy);color:#fff;text-align:left;font-weight:700;padding:2.2mm 3.2mm;font-size:8.8pt}
+td{padding:1.7mm 3.2mm;line-height:1.4;border-top:1px solid var(--line);vertical-align:top}
+tr{break-inside:avoid}
+tbody tr:nth-child(even) td{background:var(--soft)}
+td:first-child{font-weight:700;color:var(--navy);width:44mm}
+.price td:last-child,.price th:last-child{text-align:right;white-space:nowrap}
+.price tr.total td{background:#FFF6E3;font-weight:800;color:var(--navy);border-top:1.5px solid var(--gold)}
+.highlight{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin:3mm 0 4mm}
+.hbox{border-radius:4mm;padding:5mm;background:var(--navy);color:#fff}
+.hbox small{display:block;font-size:8pt;color:rgba(255,255,255,.65)}
+.hbox strong{display:block;font-size:20pt;font-weight:800;color:var(--gold-2);line-height:1.2}
+.hbox span{font-size:8.5pt;color:rgba(255,255,255,.75)}
+.hbox.light{background:#FFF6E3;color:var(--navy);border:1px solid #F3DDAE}
+.hbox.light small,.hbox.light span{color:#7A5A1E}
+.hbox.light strong{color:var(--navy)}
+ul.checks{list-style:none;display:grid;gap:2mm}
+ul.checks li{position:relative;padding-left:7mm;break-inside:avoid}
+ul.checks li::before{content:"";position:absolute;left:0;top:1.2mm;width:4mm;height:4mm;border-radius:1.2mm;background:var(--navy)}
+ul.checks li::after{content:"";position:absolute;left:1.35mm;top:2mm;width:1.3mm;height:2.2mm;border:solid var(--gold-2);border-width:0 .5mm .5mm 0;transform:rotate(45deg)}
+ul.dash{list-style:none;display:grid;gap:1.6mm;margin-bottom:3mm}
+ul.dash li{position:relative;padding-left:5mm}
+ul.dash li::before{content:"";position:absolute;left:0;top:2.3mm;width:2.4mm;height:.6mm;background:var(--gold)}
+ol.steps{list-style:none;display:grid;gap:3mm;counter-reset:s}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:9mm 1fr;gap:3mm;align-items:start;padding:3.5mm;border:1px solid var(--line);border-radius:3mm;break-inside:avoid}
+ol.steps li::before{content:counter(s);display:grid;place-items:center;width:9mm;height:9mm;border-radius:50%;background:var(--navy);color:var(--gold-2);font-weight:800}
+.cond{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin-bottom:3mm}
+.card{border:1px solid var(--line);border-radius:3mm;padding:4mm;break-inside:avoid}
+.card h3{font-size:10pt;color:var(--navy);margin-bottom:2mm}
+.card.full{grid-column:1/-1}
+.note{border-left:1mm solid var(--gold);background:var(--soft);padding:3mm 4mm;border-radius:0 2mm 2mm 0;margin-top:2mm}
+.page-break{break-before:page}
+.keep{break-inside:avoid}
+.accept{break-inside:avoid}
+.choices{display:flex;gap:8mm;margin:3mm 0 2mm}
+.box{display:inline-block;width:3.6mm;height:3.6mm;border:1.4px solid var(--navy);border-radius:.8mm;vertical-align:-0.6mm;margin-right:2mm}
+.sign{display:grid;grid-template-columns:1fr 1fr;gap:8mm;margin-top:6mm}
+.sig{border:1px solid var(--line);border-radius:3mm;padding:5mm}
+.sig h4{font-size:8pt;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:3mm}
+.sig .line{border-bottom:1px solid #9AA3BC;height:8mm;margin-bottom:1.2mm}
+.sig small{display:block;color:var(--muted);font-size:8pt;margin-bottom:3mm}
+.contact-strip{margin-top:8mm;display:flex;justify-content:space-between;align-items:center;gap:4mm;padding:5mm 6mm;border-radius:4mm;background:var(--navy);color:#fff;break-inside:avoid}
+.contact-strip img{height:8mm;filter:brightness(0) invert(1)}
+.contact-strip span{font-size:8.5pt;color:rgba(255,255,255,.75)}
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<div class="cover">
+  <div class="gold-bar"></div>
+  <div class="brand">
+    <img src="https://ancontabilidadebsb.com.br/wp-content/uploads/2026/01/ico-svg-an-contabilidade.svg" alt="">
+    <div><b>AN</b><small>Contabilidade</small></div>
+  </div>
+
+  <div class="eyebrow">Proposta comercial</div>
+  <h1>Novo site institucional da <span>AN Contabilidade</span></h1>
+  <p class="sub">Um site pronto para transformar visitas em conversas no WhatsApp e reforçar a autoridade do escritório em Brasília – DF.</p>
+
+  <div class="cover-values">
+    <div class="cv gold"><small>Valor do site</small><strong>R$&nbsp;1.500,00</strong><em>Pagamento único</em></div>
+    <div class="cv"><small>Mensalidade</small><strong>R$&nbsp;79,90/mês</strong><em>Para manter o site no ar</em></div>
+  </div>
+
+  <div class="cover-meta">
+    <div><b>Preparada para</b>AN Contabilidade</div>
+    <div><b>Data</b>15 de outubro de 2026</div>
+    <div><b>Validade</b>15 dias</div>
+  </div>
+</div>
+
+<!-- 1. APRESENTAÇÃO -->
+<section>
+  <h2><span class="n">1</span>Apresentação</h2>
+  <p class="lead">Esta proposta é para a <b>AN Contabilidade</b>: um novo site institucional, pronto e publicado, por <b>R$&nbsp;1.500,00</b> em pagamento único, mais <b>R$&nbsp;79,90/mês</b> de hospedagem.</p>
+  <p>O site foi pensado para transformar visitas em conversas no WhatsApp. Ele apresenta os serviços e especialidades da AN e reforça a autoridade do escritório em construção civil e incorporadoras. Uma versão completa já está pronta para a sua avaliação.</p>
+</section>
+
+<!-- 2. ESCOPO -->
+<section>
+  <h2><span class="n">2</span>O que está incluso no site</h2>
+  <p>Um site de página única, com a identidade visual da AN (azul-marinho e dourado) e todo o conteúdo já escrito.</p>
+  <table>
+    <thead><tr><th>Item</th><th>O que entrega</th></tr></thead>
+    <tbody>
+      <tr><td>Topo com painel animado</td><td>Título com texto dinâmico e um painel de resultados animado: gráfico de lucro, faturamento, carga tributária e economia em impostos</td></tr>
+      <tr><td>Serviços</td><td>Abertura de empresa, contabilidade completa, BPO financeiro, planejamento tributário e troca de contador</td></tr>
+      <tr><td>Especialidades</td><td>Construção civil (em destaque), incorporadoras, área da saúde e prestadores de serviços</td></tr>
+      <tr><td>Planejamento tributário</td><td>Seção dedicada: regime ideal, RET, SPE, patrimônio de afetação e reforma tributária</td></tr>
+      <tr><td>Como funciona</td><td>Passo a passo da troca de contador em 4 etapas</td></tr>
+      <tr><td>Sobre a empresa</td><td>História, sócios Nildan e Arthur Alves e destaque para a carteira em construção civil</td></tr>
+      <tr><td>Prova social</td><td>Logos dos clientes em movimento e avaliações do Google</td></tr>
+      <tr><td>Utilitários</td><td>E-book, cálculo fácil, agenda de obrigações e demais utilitários</td></tr>
+      <tr><td>Perguntas frequentes</td><td>6 dúvidas comuns de empresários, com respostas</td></tr>
+      <tr><td>Contato e WhatsApp</td><td>Formulário que abre o WhatsApp com a mensagem pronta, botão flutuante e links em todo o site</td></tr>
+      <tr><td>Celular e computador</td><td>Layout adaptado para celular, tablet e computador</td></tr>
+      <tr><td>Google e redes sociais</td><td>Dados de escritório de contabilidade para o Google e prévia do link ao compartilhar no WhatsApp</td></tr>
+      <tr><td>Segurança</td><td>Certificado SSL (cadeado/HTTPS) e página de erro personalizada</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 3. INVESTIMENTO -->
+<section class="keep">
+  <h2><span class="n">3</span>Investimento</h2>
+  <p class="lead">O valor do site é <b>R$&nbsp;1.500,00</b>, em pagamento único. Para manter o site no ar, há uma mensalidade de <b>R$&nbsp;79,90</b>.</p>
+  <div class="highlight">
+    <div class="hbox"><small>Desenvolvimento do site</small><strong>R$&nbsp;1.500,00</strong><span>Pagamento único</span></div>
+    <div class="hbox light"><small>Mensalidade</small><strong>R$&nbsp;79,90/mês</strong><span>Para manter o site no ar</span></div>
+  </div>
+  <table class="price">
+    <thead><tr><th>Item</th><th>Tipo</th><th>Valor</th></tr></thead>
+    <tbody>
+      <tr><td>Desenvolvimento do site</td><td>Pagamento único</td><td>R$&nbsp;1.500,00</td></tr>
+      <tr><td>Mensalidade para manter o site no ar</td><td>Mensal</td><td>R$&nbsp;79,90/mês</td></tr>
+      <tr class="total"><td>Total no 1º ano</td><td>1.500,00 + 12 × 79,90</td><td>R$&nbsp;2.458,80</td></tr>
+      <tr class="total"><td>A partir do 2º ano</td><td>12 × 79,90</td><td>R$&nbsp;958,80/ano</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 4. HOSPEDAGEM -->
+<section class="keep">
+  <h2><span class="n">4</span>O que a hospedagem mensal cobre</h2>
+  <p>Com os R$&nbsp;79,90/mês, o site fica no ar, rápido e seguro, sem que a AN precise se preocupar com servidor.</p>
+  <ul class="checks">
+    <li><b>Servidor de alta performance:</b> carregamento rápido no Brasil e no exterior</li>
+    <li><b>Certificado SSL:</b> cadeado e HTTPS ativos e renovados automaticamente</li>
+    <li><b>Configuração do domínio:</b> ligação do domínio da AN ao site, inclusive se o domínio mudar</li>
+    <li><b>Monitoramento:</b> acompanhamento de disponibilidade e correção de falhas técnicas</li>
+    <li><b>Cópia de segurança:</b> versões anteriores do site guardadas para restauração</li>
+    <li><b>Pequenos ajustes:</b> até 1 alteração simples por mês, como trocar um texto, telefone ou imagem</li>
+    <li><b>Suporte:</b> atendimento por WhatsApp em horário comercial</li>
+  </ul>
+</section>
+
+<!-- 5. PRAZOS -->
+<section class="keep">
+  <h2><span class="n">5</span>Prazos e etapas</h2>
+  <p>Como o site já está desenvolvido, ele pode ir ao ar em até <b>5 dias úteis</b> após o aceite.</p>
+  <ol class="steps">
+    <li><div><b>Aceite e entrada:</b> assinatura desta proposta e pagamento da entrada.</div></li>
+    <li><div><b>Ajustes (até 3 dias úteis):</b> a AN revisa textos, dados de contato e imagens; aplicamos até 2 rodadas de ajustes.</div></li>
+    <li><div><b>Publicação (até 2 dias úteis):</b> site no ar com o domínio da AN, SSL ativo e testes em celular e computador.</div></li>
+    <li><div><b>Acompanhamento:</b> início da hospedagem mensal e do suporte.</div></li>
+  </ol>
+</section>
+
+<!-- 6. CONDIÇÕES -->
+<section class="keep">
+  <h2><span class="n">6</span>Condições comerciais</h2>
+  <div class="cond">
+    <div class="card">
+      <h3>Pagamento do site (R$&nbsp;1.500,00), à escolha da AN</h3>
+      <ul class="dash">
+        <li>50% (R$&nbsp;750,00) no aceite e 50% (R$&nbsp;750,00) na publicação, via Pix ou boleto</li>
+        <li>À vista via Pix no aceite</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Hospedagem (R$&nbsp;79,90/mês)</h3>
+      <ul class="dash">
+        <li>Cobrança mensal a partir do mês da publicação, com vencimento no dia combinado no aceite</li>
+        <li>Sem fidelidade: pode ser cancelada com 30 dias de aviso</li>
+        <li>Reajuste anual pelo IPCA</li>
+      </ul>
+    </div>
+    <div class="card full">
+      <h3>Não incluso</h3>
+      <ul class="dash">
+        <li>Registro ou renovação do domínio (feito pela AN no Registro.br)</li>
+        <li>Novas páginas, blog, área do cliente ou funcionalidades fora do escopo acima (orçadas à parte)</li>
+        <li>Produção de fotos, vídeos ou textos novos além dos já entregues</li>
+        <li>Gestão de anúncios e redes sociais</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note"><b>Validade da proposta:</b> 15 dias a partir de 15/10/2026. &nbsp;·&nbsp; <b>Propriedade:</b> após a quitação do desenvolvimento, o conteúdo e o domínio são da AN Contabilidade.</p>
+</section>
+
+
+</body>
+</html>
